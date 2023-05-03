@@ -1,0 +1,63 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+            <h1 class="text-center">Login or Sign Up</h1>
+            <p class="text-center lead">Make your Login or Sign Up</p>
+
+            <div class="row">
+                <div class="col-lg">
+                    <h4>Make your Sign Up:</h4>
+                    <p>If you don't have an account yet, fill out the form:</p>
+
+                    <form action="/login/register" method="POST">
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                        <div class="form-group my-3">
+                            <label>Email address</label>
+                            <input type="email" class="form-control my-2" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control my-2" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
+                          </div>
+                            <button type="submit" class="btn btn-primary my-3">Sign Up</button>
+                      </form>
+
+                </div>
+
+                <div class="col-lg">
+                    <h4>Make your Login:</h4>
+
+                    <p>If you already have an account, make your login:</p>
+
+                    <form action="/login/login" method="POST">
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                        <div class="form-group my-3">
+                            <label>Email address</label>
+                            <input type="email" class="form-control my-2" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control my-2" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
+                          </div>
+                            <button type="submit" class="btn btn-primary my-3">Login</button>
+                      </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+
+<%- include('includes/footer') %>
+

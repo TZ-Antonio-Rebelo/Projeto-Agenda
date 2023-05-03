@@ -1,13 +1,13 @@
 const express = require('express');
 const route = express.Router();
+
 const homeController = require('./src/controllers/homeController');
-const contactoController = require('./src/controllers/contactoController');
+const loginController = require('./src/controllers/loginController');
 
 // Rotas da home
-route.get('/', homeController.paginaInicial);
-route.post('/', homeController.trataPost);
+route.get('/', homeController.index);
 
-// Rotas de contacto
-route.get('/contacto', contactoController.paginaInicial);
+// Rotes Login
+route.get('/login/index', loginController.index);
 
 module.exports = route;
