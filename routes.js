@@ -9,5 +9,6 @@ route.get('/', homeController.index);
 
 // Rotes Login
 route.get('/login/index', loginController.index);
+route.post('/login/register', loginController.register);
 
 module.exports = route;
